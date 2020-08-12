@@ -12,8 +12,8 @@ Encoding: UTF-8
 License: GPL (>= 2)
 Depends: R(>= 3.3.0)
 Repository: CRAN
-Version: 0.1.1
-Date: 2020-08-04
+Version: 0.1.2
+Date: 2020-08-12
 NeedsCompilation: no
-Packaged: 2020-08-08 03:04:03 UTC; NikPardaz
-Date/Publication: 2020-08-11 09:02:06 UTC
+Packaged: 2020-08-11 23:28:49 UTC; NikPardaz
+Date/Publication: 2020-08-12 11:22:15 UTC

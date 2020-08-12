@@ -191,7 +191,7 @@ regaep<-function(y, x){
     x     <- cbind( rep(1, n), X )
     out   <- matrix( NA, ncol = (3+k), nrow = N )
     X1    <- subset( cbind(Y,X), (Y<quantile(Y,0.8) | Y>quantile(Y,0.2)) )
-    Beta  <- summary(lm( Y~X1, data=data.frame(X1) ))$coefficients[1:k]
+    Beta  <- summary(lm( X1[,1]~X1[,2], data=data.frame(X1) ))$coefficients[1:k]
     f0.alpha <- function(x){-mean((Y-mean(Y))^4)/((n-1)/n*var(Y))^2+gamma(5/x)*gamma(1/x)/(gamma(3/x))^2}
     alpha    <- ifelse(f0.alpha(0.05)*f0.alpha(2)<0, uniroot(f0.alpha, lower=0.05, upper=2)$root, 1)
     epsilon  <- (quantile(Y,m2)[[1]]-2*quantile(Y,.5)[[1]]+quantile(Y,m1)[[1]])/(quantile(Y,m2)[[1]]-quantile(Y,m1)[[1]])
